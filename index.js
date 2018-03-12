@@ -9,20 +9,20 @@ function doAnimation(action, num, soundStart){
         if(i < 10) {
             i = '0' + i;
         }
-        tom.src = '素材/' + action + '/' + action + '_'+ i +'.jpg';
+        tom.src = 'resource/' + action + '/' + action + '_'+ i +'.jpg';
         i++;
         if(i > num) {
             clearInterval(timer);
         }
     },150);
     setTimeout(function(){
-        oTalk.src = '素材/sounds/' + action + '.m4a'; 
+        oTalk.src = 'resource/sounds/' + action + '.m4a'; 
         oTalk.play();
     },150*soundStart);
 }
 // 多个声音
 function sounds(soundSrc, soundStart){
-    oTalk.src = '素材/sounds/' + soundSrc + '.m4a';
+    oTalk.src = 'resource/sounds/' + soundSrc + '.m4a';
     setTimeout(function(){
         oTalk.play();
     },150*soundStart);
